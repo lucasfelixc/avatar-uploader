@@ -35,9 +35,4 @@ export const GlobalStyles = createGlobalStyle`
       font-size: 87.5%;
     }
   }
-  @media(max-width: 520px) {
-    html {
-      font-size: 75%;
-    }
-  }
 `;

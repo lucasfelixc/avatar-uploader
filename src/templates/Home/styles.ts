@@ -1,3 +1,10 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const Container = styled.div``;
+export const Container = styled.div`
+  ${({ theme }) => css`
+    width: 100vw;
+    height: 100vh;
+
+    padding: ${theme.spacings.medium};
+  `}
+`;
