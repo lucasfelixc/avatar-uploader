@@ -1,1 +1,1 @@
-export { default, getServerSideProps } from '@/templates/Home';
+export { default } from '@/templates/Home';

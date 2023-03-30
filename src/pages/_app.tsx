@@ -7,7 +7,9 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <Head>
-        <title>Avatar uploader</title>
+        <title>Avatar Uploader</title>
+
+        <link rel='shortcut icon' href='/img/icon-branding.webp' />
       </Head>
       <ThemeProvider>
         <Component {...pageProps} />
