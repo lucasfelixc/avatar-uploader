@@ -19,7 +19,11 @@ export const InputUploadWrapper = styled.div<InputUploadWrapperProps>`
     height: 100%;
 
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+
+    gap: 2rem;
 
     background-color: ${theme.colors.grayScale01};
 
