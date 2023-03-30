@@ -1,21 +1,24 @@
 import { useState } from 'react';
-import ImageUploading, { ImageListType } from 'react-images-uploading';
-import { InputDropInfo } from '@/components';
+import ImageUploading, { ImageListType, ImageType } from 'react-images-uploading';
+import { InputDropInfo, ImagePreview } from '@/components';
 
 import * as S from './styles';
 
 export const AvatarUploader = () => {
-  const [images, setImages] = useState([]);
+  const [images, setImages] = useState<ImageType[]>([]);
 
   const onChange = (imageList: ImageListType) => {
-    setImages(imageList as never[]);
+    setImages(imageList);
   };
 
   return (
     <S.Container>
       <ImageUploading value={images} onChange={onChange}>
-        {({ onImageUpload, isDragging, dragProps }) => (
+        {({ imageList, onImageUpload, isDragging, dragProps }) => (
           <S.InputUploadWrapper isDragging={isDragging} onClick={onImageUpload} {...dragProps}>
+            {!!imageList.length &&
+              imageList.map((img) => <ImagePreview imgSrc={img.dataURL || ''} key={img.dataURL} />)}
+
             <InputDropInfo />
           </S.InputUploadWrapper>
         )}
