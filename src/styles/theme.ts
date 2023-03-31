@@ -1,6 +1,6 @@
 export const theme = {
   colors: {
-    backgroundWhite: '#FFFFFF',
+    white: '#FFFFFF',
     grayScale01: '#F2F5F8',
     grayScale02: '#C7CDD3',
     grayScale03: '#C3CBD5',
@@ -28,14 +28,14 @@ export const theme = {
       extraBold: 800,
     },
     sizes: {
-      xxsmall: '1rem',
-      xsmall: '1.2rem',
-      small: '1.4rem',
-      medium: '1.6rem',
-      large: '1.8rem',
-      xlarge: '2rem',
-      xxlarge: '2.4rem',
-      huge: '3.2rem',
+      xsmall: '0.75rem',
+      small: '0.875rem',
+      normal: '1rem',
+      medium: '1.2rem',
+      large: '1.4rem',
+      xlarge: '1.6rem',
+      xxlarge: '2rem',
+      huge: '2.4rem',
     },
   },
   spacings: {

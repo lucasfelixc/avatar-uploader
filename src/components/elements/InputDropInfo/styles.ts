@@ -11,12 +11,18 @@ export const Container = styled.div`
   gap: 1rem;
 
   ${({ theme }) => css`
+    font-size: ${theme.font.sizes.small};
+
     > span.input-description-organization {
       color: ${theme.colors.grayScale04};
 
       font-weight: ${theme.font.weights.normal};
     }
   `}
+
+  @media (min-width: 720px) {
+    width: fit-content;
+  }
 `;
 
 export const DescriptionInfo = styled.div`
