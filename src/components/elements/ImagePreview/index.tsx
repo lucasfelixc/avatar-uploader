@@ -6,11 +6,12 @@ import * as S from './styles';
 type Props = {
   imgSrc?: string;
   error?: boolean;
+  dimension?: number;
 };
 
-export const ImagePreview = ({ imgSrc, error }: Props) => {
+export const ImagePreview = ({ imgSrc, error, dimension }: Props) => {
   return (
-    <S.Container imgSrc={imgSrc} error={error}>
+    <S.Container imgSrc={imgSrc} error={error} dimension={dimension}>
       {!!error && <Image src={warningIcon} alt='warning' />}
     </S.Container>
   );

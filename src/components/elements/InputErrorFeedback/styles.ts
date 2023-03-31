@@ -7,6 +7,10 @@ export const Container = styled.div`
   text-align: center;
 
   gap: 1rem;
+
+  @media (min-width: 720px) {
+    align-items: flex-start;
+  }
 `;
 
 export const ContentErrorsText = styled.div`
@@ -20,8 +24,6 @@ export const ContentErrorsText = styled.div`
 export const TryButton = styled.span`
   ${({ theme }) => css`
     color: ${theme.colors.grayScale06};
-
-    font-size: ${theme.font.sizes.xsmall};
 
     text-decoration: underline;
   `}
