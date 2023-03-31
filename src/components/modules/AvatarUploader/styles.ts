@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components';
 
 type InputUploadWrapperProps = {
   isDragging: boolean;
+  error: boolean;
 };
 
 export const Container = styled.div`
@@ -14,7 +15,7 @@ export const Container = styled.div`
 `;
 
 export const InputUploadWrapper = styled.div<InputUploadWrapperProps>`
-  ${({ theme, isDragging }) => css`
+  ${({ theme, isDragging, error }) => css`
     width: 100%;
     height: 100%;
 
@@ -27,7 +28,11 @@ export const InputUploadWrapper = styled.div<InputUploadWrapperProps>`
 
     background-color: ${theme.colors.grayScale01};
 
-    border: 2px ${isDragging ? 'solid' : 'dashed'} ${theme.colors.grayScale02};
+    ${!error &&
+    css`
+      border: 2px ${isDragging ? 'solid' : 'dashed'} ${theme.colors.grayScale02};
+    `}
+
     border-radius: ${theme.border.radius.large};
 
     padding: ${theme.spacings.medium};
