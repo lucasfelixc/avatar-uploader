@@ -1,0 +1,1 @@
+export { WrapperTheme } from './wrapperTheme';
