@@ -15,15 +15,19 @@ const errorsText = {
 
 export const InputErrorFeedback = ({ errorTypeList, handleClickTryAgain }: Props) => {
   return (
-    <S.Container>
+    <S.Container data-testid='input-error-content'>
       {!!errorTypeList && (
         <S.ContentErrorsText>
           {errorTypeList.map((type) => (
-            <span key={type}>{errorsText[type as keyof ErrorsType]}</span>
+            <span key={type} data-testid='error-text'>
+              {errorsText[type as keyof ErrorsType]}
+            </span>
           ))}
         </S.ContentErrorsText>
       )}
-      <S.TryButton onClick={handleClickTryAgain}>Try again</S.TryButton>
+      <S.TryButton onClick={handleClickTryAgain} data-testid='try-again-button'>
+        Try again
+      </S.TryButton>
     </S.Container>
   );
 };

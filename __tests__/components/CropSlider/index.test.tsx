@@ -19,10 +19,7 @@ describe('<CropSlider />', () => {
     const { getByTestId } = WrapperTheme(
       render,
       <CropSlider
-        handleChangeCropValue={(ev) => {
-          window.alert(ev);
-          console.log('pegada de cria');
-        }}
+        handleChangeCropValue={(ev) => window.alert(ev)}
         handleClickSaveDimension={() => null}
       />,
     );
