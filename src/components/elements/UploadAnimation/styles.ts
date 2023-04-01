@@ -1,8 +1,11 @@
 import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
+  width: 100%;
+
   display: flex;
   align-items: center;
+  justify-content: center;
 
   gap: 2rem;
 
@@ -16,6 +19,11 @@ export const Container = styled.div`
 `;
 
 export const AnimationContent = styled.div`
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 2rem;
+  height: 2rem;
+
+  @media (min-width: 720px) {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
 `;
