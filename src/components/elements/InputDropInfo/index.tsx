@@ -5,7 +5,7 @@ import * as S from './styles';
 
 export const InputDropInfo = () => {
   return (
-    <S.Container>
+    <S.Container data-testid='input-drop-info-content'>
       <S.DescriptionInfo>
         <Image src={ImageIcon} alt='Image icon' />
         <span>Organization Logo</span>
