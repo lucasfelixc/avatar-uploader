@@ -26,5 +26,6 @@ export const TryButton = styled.span`
     color: ${theme.colors.grayScale06};
 
     text-decoration: underline;
+    cursor: pointer;
   `}
 `;

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, MouseEvent } from 'react';
 import ImageUploading, { ImageListType, ImageType, ErrorsType } from 'react-images-uploading';
 import {
   InputDropInfo,
@@ -7,6 +7,7 @@ import {
   CropSlider,
   Close,
   UploadAnimation,
+  Trash,
 } from '@/components';
 
 import * as S from './styles';
@@ -52,6 +53,12 @@ export const AvatarUploader = () => {
     setIsEditing(false);
     setImages(previewImage);
     setCropDimension(previewCropDimension);
+  };
+
+  const handleClearImages = (e: MouseEvent) => {
+    e.stopPropagation();
+    setImages([]);
+    setPreviewImage([]);
   };
 
   return (
@@ -106,7 +113,10 @@ export const AvatarUploader = () => {
                     />
                   </>
                 ) : (
-                  <InputDropInfo />
+                  <>
+                    {!!imageList.length && <Trash handleClearImages={handleClearImages} />}
+                    <InputDropInfo />
+                  </>
                 )}
               </>
             )}
