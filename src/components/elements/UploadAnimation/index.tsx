@@ -15,7 +15,7 @@ export const UploadAnimation = () => {
   };
 
   return (
-    <S.Container>
+    <S.Container data-testid='upload-animation-content'>
       <S.AnimationContent>
         <Lottie options={defaultOptions} />
       </S.AnimationContent>
