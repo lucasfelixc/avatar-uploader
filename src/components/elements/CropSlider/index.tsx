@@ -12,9 +12,9 @@ export const CropSlider = ({ handleChangeCropValue, handleClickSaveDimension }: 
       <S.InputRange
         data-testid='range-input'
         type='range'
-        min='20'
-        max='300'
-        defaultValue={100}
+        min='1'
+        max='20'
+        defaultValue={1}
         onChange={(ev) => handleChangeCropValue(ev.target.value)}
       />
       <S.ContentButton>
