@@ -17,7 +17,7 @@
 
 ## :bookmark: Purpose of the application
 
-The Avatar Uploader is an application that aims to upload avatars and resize them for use in various scenarios.
+The Avatar Uploader is an application that aims to upload avatars and resize them for use in various scenarios. To access the application go to https://avatar-uploader-nine.vercel.app/
 
 <a id="technologies-used"></a>
 
