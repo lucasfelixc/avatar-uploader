@@ -1,4 +1,4 @@
-import { useState, MouseEvent } from 'react';
+import { useState, MouseEvent, useContext, useCallback } from 'react';
 import ImageUploading, { ImageListType, ImageType, ErrorsType } from 'react-images-uploading';
 import {
   InputDropInfo,
@@ -9,10 +9,12 @@ import {
   UploadAnimation,
   Trash,
 } from '@/components';
+import { ImageContext } from '@/context/ImageContext';
 
 import * as S from './styles';
 
 export const AvatarUploader = () => {
+  const { setImageSaved } = useContext(ImageContext);
   const [images, setImages] = useState<ImageType[]>([]);
   const [previewImage, setPreviewImage] = useState<ImageType[]>([]);
   const [listErrors, setListErrors] = useState<string[]>([]);
@@ -20,45 +22,49 @@ export const AvatarUploader = () => {
   const [cropDimension, setCropDimension] = useState(100);
   const [previewCropDimension, setPreviewCropDimension] = useState(100);
 
-  const onChange = (imageList: ImageListType) => {
-    setCropDimension(100);
-    setIsEditing(true);
-    setImages(imageList);
-  };
-
-  const handleUploadError = (errors: ErrorsType) => {
+  const handleUploadError = useCallback((errors: ErrorsType) => {
     if (errors) {
       setIsEditing(false);
       const typeErrors = Object.keys(errors);
 
       setListErrors(typeErrors);
     }
-  };
+  }, []);
 
-  const handleClickTryAgain = () => {
+  const handleClickTryAgain = useCallback(() => {
     setListErrors([]);
     setIsEditing(false);
-  };
+  }, []);
 
-  const handleChangeCropValue = (value: string) =>
-    parseInt(value) % 10 === 0 ? setCropDimension(parseInt(value)) : null;
+  const handleChangeCropValue = useCallback(
+    (value: string) => (parseInt(value) % 10 === 0 ? setCropDimension(parseInt(value)) : null),
+    [],
+  );
+
+  const handleCancelUpload = useCallback(() => {
+    setIsEditing(false);
+    setImages(previewImage);
+    setCropDimension(previewCropDimension);
+  }, [previewImage, previewCropDimension]);
+
+  const handleChange = (imageList: ImageListType) => {
+    setCropDimension(100);
+    setIsEditing(true);
+    setImages(imageList);
+  };
 
   const handleClickSaveDimension = () => {
     setIsEditing(false);
     setPreviewImage(images);
     setPreviewCropDimension(cropDimension);
-  };
-
-  const handleCancelUpload = () => {
-    setIsEditing(false);
-    setImages(previewImage);
-    setCropDimension(previewCropDimension);
+    setImageSaved(images[0]);
   };
 
   const handleClearImages = (e: MouseEvent) => {
     e.stopPropagation();
     setImages([]);
     setPreviewImage([]);
+    setImageSaved(null);
   };
 
   return (
@@ -66,7 +72,7 @@ export const AvatarUploader = () => {
       <ImageUploading
         data-testid='image-uploading'
         value={images}
-        onChange={onChange}
+        onChange={handleChange}
         onError={handleUploadError}
         inputProps={{ alt: 'Avatar image' }}
       >
