@@ -1,5 +1,5 @@
 <h3 align="center">
-    <img alt="Logo" title="#logo" width="300px" src=".github/avatar-uploader.webp">
+    <img alt="Logo" title="#logo" width="100px" src=".github/avatar-uploader.webp">
     <br><br>
     <b>Avatar Uploader</b>
     <br>
@@ -42,13 +42,13 @@ The project was developed using the following technologies
 ## :heavy_check_mark: :computer: Web result
 
 <h1 align="center">
-    <img alt="Web" src=".github/desktop.gif" width="900px">
+    <img alt="Web" src=".github/desktop.gif" width="800px">
 </h1>
 
 ## :heavy_check_mark: :computer: Mobile result
 
 <h1 align="center">
-    <img alt="Mobile" src=".github/mobile.gif" width="900px">
+    <img alt="Mobile" src=".github/mobile.gif" width="250px">
 </h1>
 
 <a id="how-to-use"></a>
