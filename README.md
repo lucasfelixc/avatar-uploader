@@ -1,38 +1,92 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h3 align="center">
+    <img alt="Logo" title="#logo" width="300px" src=".github/avatar-uploader.webp">
+    <br><br>
+    <b>Avatar Uploader</b>
+    <br>
+</h3>
 
-## Getting Started
+# Index
 
-First, run the development server:
+- [Purpose of the application](#purpose)
+- [Technologies used](#technologies-used)
+- [Results](#results)
+- [How to use](#how-to-use)
+- [How to contribute](#how-to-contribute)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+<a id="purpose"></a>
+
+## :bookmark: Purpose of the application
+
+The Avatar Uploader is an application that aims to upload avatars and resize them for use in various scenarios.
+
+<a id="technologies-used"></a>
+
+## :rocket: Technologies used
+
+The project was developed using the following technologies
+- [TypeScript](https://www.typescriptlang.org/)
+- [React](https://reactjs.org/)
+- [Next](https://nextjs.org/)
+- [Styled Components](https://styled-components.com/)
+- [React Images Uploading](https://github.com/vutoan266/react-images-uploading)
+- [Jest](https://jestjs.io/pt-BR/)
+- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
+- [ESLint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
+- [Husky](https://typicode.github.io/husky/#/)
+- [Lint Staged](https://github.com/okonet/lint-staged)
+
+
+<a id="results"></a>
+
+## :heavy_check_mark: :computer: Web result
+
+<h1 align="center">
+    <img alt="Web" src=".github/desktop.gif" width="900px">
+</h1>
+
+## :heavy_check_mark: :computer: Mobile result
+
+<h1 align="center">
+    <img alt="Mobile" src=".github/mobile.gif" width="900px">
+</h1>
+
+<a id="how-to-use"></a>
+
+## :fire: How to use
+
+- ### **Prerequisites**
+
+  - It is **necessary** to have the **[Node.js](https://nodejs.org/en/)** installed on the machine
+  - Also **need** a package manager, be the **[NPM](https://www.npmjs.com/)** or **[Yarn](https://yarnpkg.com/)**.
+
+1. Make a clone :
+
+```sh
+  $ git clone git@github.com:lucasfelixc/avatar-uploader.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Running the application:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```sh
+  # Install the dependencies
+  $ npm install or $ yarn install
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+  # Start the web application
+  $ npm run dev or yarn dev
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+<a id="how-to-contribute"></a>
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## :recycle: How to contribute
 
-## Learn More
+- Fork this repository,
+- Create a branch with your feature: `git checkout -b my-feature`
+- Commit your changes: `git commit -m 'feat: My new feature'`
+- Push your branch: `git push origin my-feature`
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<h4 align="center">
+    By <a href="https://www.linkedin.com/in/lucasfelixdev/" target="_blank">Lucas Felix</a>
+</h4>
