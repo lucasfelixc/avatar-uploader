@@ -23,6 +23,9 @@ export const Wrapper = styled.div`
 
 export const Container = styled.div<ContainerProps>`
   ${({ theme, imgSrc, error, dimension }) => css`
+    width: 100%;
+    height: 100%;
+
     display: flex;
     align-items: center;
     justify-content: center;
