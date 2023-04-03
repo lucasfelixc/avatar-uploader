@@ -62,10 +62,17 @@ export const AvatarUploader = () => {
   };
 
   return (
-    <S.Container>
-      <ImageUploading value={images} onChange={onChange} onError={handleUploadError}>
+    <S.Container data-testid='avatar-uploader-content'>
+      <ImageUploading
+        data-testid='image-uploading'
+        value={images}
+        onChange={onChange}
+        onError={handleUploadError}
+        inputProps={{ alt: 'Avatar image' }}
+      >
         {({ imageList, onImageUpload, onImageRemoveAll, isDragging, dragProps }) => (
           <S.InputUploadWrapper
+            data-testid='input-upload-wrapper'
             isDragging={isDragging && !listErrors.length && !isEditing}
             error={!!listErrors.length}
             isEditing={isEditing}
@@ -98,7 +105,7 @@ export const AvatarUploader = () => {
                   !listErrors.length &&
                   imageList.map((img) => (
                     <ImagePreview
-                      imgSrc={img.dataURL || ''}
+                      imgSrc={img.dataURL as string}
                       key={img.dataURL}
                       dimension={cropDimension}
                     />

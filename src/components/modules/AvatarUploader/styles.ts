@@ -62,10 +62,3 @@ export const InputUploadWrapper = styled.div<InputUploadWrapperProps>`
     }
   `}
 `;
-
-export const CloseContent = styled.div`
-  position: absolute;
-
-  top: 2rem;
-  right: 2rem;
-`;
