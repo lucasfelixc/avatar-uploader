@@ -51,6 +51,12 @@ The project was developed using the following technologies
     <img alt="Mobile" src=".github/mobile.gif" width="250px">
 </h1>
 
+## :heavy_check_mark: :computer: Test coverage
+
+<h1 align="center">
+    <img alt="Mobile" src=".github/coverage.png" width="800px">
+</h1>
+
 <a id="how-to-use"></a>
 
 ## :fire: How to use
@@ -74,6 +80,13 @@ The project was developed using the following technologies
 
   # Start the web application
   $ npm run dev or yarn dev
+```
+
+3. Testing the application:
+
+```sh
+  # To run the tests and generate coverage
+  $ npm run coverage or yarn coverage
 ```
 
 <a id="how-to-contribute"></a>
