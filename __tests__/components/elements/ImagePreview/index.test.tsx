@@ -21,12 +21,12 @@ describe('<ImagePreview />', () => {
   });
 
   test('Should render with a specific dimension', () => {
-    WrapperTheme(render, <ImagePreview imgSrc={closeIcon.src} dimension={79} />);
+    WrapperTheme(render, <ImagePreview imgSrc={closeIcon.src} dimension={19} />);
 
     const imagePreview = document.getElementsByClassName('image-preview-content');
     const imagePreviewStyle = window.getComputedStyle(imagePreview[0]);
 
-    expect(imagePreviewStyle.backgroundSize).toBe('79%');
+    expect(imagePreviewStyle.transform).toBe('scale(19)');
   });
 
   test('Should render error icon', () => {

@@ -25,9 +25,9 @@ describe('<CropSlider />', () => {
     );
 
     const rangeInput = getByTestId('range-input');
-    fireEvent.change(rangeInput, { target: { value: 258 } });
+    fireEvent.change(rangeInput, { target: { value: 20 } });
 
-    expect(alert).toBeCalledWith('258');
+    expect(alert).toBeCalledWith('20');
   });
 
   test('Should click in save button', () => {

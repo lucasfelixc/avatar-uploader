@@ -37,7 +37,7 @@ export const AvatarUploader = () => {
   }, []);
 
   const handleChangeCropValue = useCallback(
-    (value: string) => (parseInt(value) !== 0 ? setCropDimension(parseInt(value)) : null),
+    (value: string) => setCropDimension(parseInt(value)),
     [],
   );
 
