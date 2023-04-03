@@ -13,10 +13,15 @@ type Props = {
 export const Trash = ({ handleClearImages }: Props) => {
   return (
     <>
-      <S.TrashContent onClick={handleClearImages} id='clearImagesButton'>
+      <S.TrashContent
+        onClick={handleClearImages}
+        id='clearImagesButton'
+        data-testid='clearImagesButton'
+        data-tooltip-content='Remove images'
+      >
         <Image src={trashIcon} alt='Clear images' />
       </S.TrashContent>
-      <ReactTooltip anchorId='clearImagesButton' place='top' content='Remove images' />
+      <ReactTooltip anchorSelect='#clearImagesButton' place='top' />
     </>
   );
 };

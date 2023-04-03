@@ -7,9 +7,10 @@ type Props = {
 
 export const CropSlider = ({ handleChangeCropValue, handleClickSaveDimension }: Props) => {
   return (
-    <S.Container>
+    <S.Container data-testid='crop-content'>
       <span className='crop-title'>Crop</span>
       <S.InputRange
+        data-testid='range-input'
         type='range'
         min='20'
         max='300'
@@ -17,7 +18,9 @@ export const CropSlider = ({ handleChangeCropValue, handleClickSaveDimension }: 
         onChange={(ev) => handleChangeCropValue(ev.target.value)}
       />
       <S.ContentButton>
-        <S.ButtonSubmit onClick={handleClickSaveDimension}>Save</S.ButtonSubmit>
+        <S.ButtonSubmit data-testid='save-button' onClick={handleClickSaveDimension}>
+          Save
+        </S.ButtonSubmit>
       </S.ContentButton>
     </S.Container>
   );

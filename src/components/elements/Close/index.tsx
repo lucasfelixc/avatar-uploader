@@ -9,7 +9,7 @@ type Props = {
 
 export const Close = ({ handleCancelUpload }: Props) => {
   return (
-    <S.CloseContent onClick={handleCancelUpload}>
+    <S.CloseContent onClick={handleCancelUpload} data-testid='close-content'>
       <Image src={closeIcon} alt='Close editing' />
     </S.CloseContent>
   );
