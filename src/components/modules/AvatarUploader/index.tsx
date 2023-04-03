@@ -19,8 +19,8 @@ export const AvatarUploader = () => {
   const [previewImage, setPreviewImage] = useState<ImageType[]>([]);
   const [listErrors, setListErrors] = useState<string[]>([]);
   const [isEditing, setIsEditing] = useState(false);
-  const [cropDimension, setCropDimension] = useState(100);
-  const [previewCropDimension, setPreviewCropDimension] = useState(100);
+  const [cropDimension, setCropDimension] = useState(1);
+  const [previewCropDimension, setPreviewCropDimension] = useState(1);
 
   const handleUploadError = useCallback((errors: ErrorsType) => {
     if (errors) {
@@ -37,7 +37,7 @@ export const AvatarUploader = () => {
   }, []);
 
   const handleChangeCropValue = useCallback(
-    (value: string) => (parseInt(value) % 10 === 0 ? setCropDimension(parseInt(value)) : null),
+    (value: string) => setCropDimension(parseInt(value)),
     [],
   );
 
@@ -48,7 +48,7 @@ export const AvatarUploader = () => {
   }, [previewImage, previewCropDimension]);
 
   const handleChange = (imageList: ImageListType) => {
-    setCropDimension(100);
+    setCropDimension(1);
     setIsEditing(true);
     setImages(imageList);
   };

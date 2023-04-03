@@ -6,11 +6,23 @@ type ContainerProps = {
   dimension?: number;
 };
 
+export const Wrapper = styled.div`
+  width: 8.1rem;
+  height: 8.1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  ${({ theme }) => css`
+    border-radius: ${theme.border.radius.full};
+  `}
+`;
+
 export const Container = styled.div<ContainerProps>`
   ${({ theme, imgSrc, error, dimension }) => css`
-    width: 8.1rem;
-    height: 8.1rem;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -23,7 +35,8 @@ export const Container = styled.div<ContainerProps>`
           background-image: ${`url(${imgSrc})`};
           background-position: center;
           background-repeat: no-repeat;
-          background-size: ${dimension ? `${dimension}%` : '100%'};
+          background-size: 100%;
+          transform: scale(${dimension});
         `}
 
     border-radius: ${theme.border.radius.full};

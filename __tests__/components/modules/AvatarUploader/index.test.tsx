@@ -113,11 +113,11 @@ describe('<AvatarUploader />', () => {
     expect(imagePreview).toBeInTheDocument();
 
     const rangeInput = getByTestId('range-input');
-    fireEvent.change(rangeInput, { target: { value: 250 } });
+    fireEvent.change(rangeInput, { target: { value: 16 } });
 
     const imagePreviewStyle = window.getComputedStyle(imagePreview);
 
-    expect(imagePreviewStyle.backgroundSize).toBe('250%');
+    expect(imagePreviewStyle.transform).toBe('scale(16)');
   });
 
   test('Should save the size image', async () => {
@@ -139,13 +139,13 @@ describe('<AvatarUploader />', () => {
     expect(imagePreview).toBeInTheDocument();
 
     const rangeInput = getByTestId('range-input');
-    fireEvent.change(rangeInput, { target: { value: 250 } });
+    fireEvent.change(rangeInput, { target: { value: 18 } });
 
     fireEvent.click(getByTestId('save-button'));
 
     const imagePreviewStyle = window.getComputedStyle(imagePreview);
 
-    expect(imagePreviewStyle.backgroundSize).toBe('250%');
+    expect(imagePreviewStyle.transform).toBe('scale(18)');
   });
 
   test('Should save default size image', async () => {
